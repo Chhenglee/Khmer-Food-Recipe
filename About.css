@@ -1,6 +1,7 @@
 *{
-    margin: 5px;
-    padding: 5px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
 }
 .main ul{
     margin:auto;
@@ -39,7 +40,7 @@ ul li a:hover{
         box-shadow: 3px gray;
         background-color:  blue(255, 255, 255);
         width: 100%;
-        max-width: 1200px;
+        justify-content: center;
     }
     .text{
         text-shadow: 3px 3px 5px black;
@@ -63,11 +64,13 @@ ul li a:hover{
         padding: 20px;
         color: rgb(65, 69, 73);
         font-family:Maiandra GD;
-        display: grid;
+        /* display: grid; */
     }
     .History{
         display:flex;
-        width: 50%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
     .P1 img{
         border-radius: 20px;
@@ -76,7 +79,7 @@ ul li a:hover{
         margin-bottom: 60px;
         margin: 20px;
     }
-  
+    
     .P1 p{
         text-align: justify;
     }
@@ -84,7 +87,7 @@ ul li a:hover{
         text-align: center; 
         font-family: CF Oak Island PERSONEL;
     }
-    #Chhengly a:hover{
+    #Chhengly div a:hover{
         color: rgb(27, 224, 1);
         transition: 0.5s;
     }
@@ -92,7 +95,7 @@ ul li a:hover{
         text-align: center;
         font-family: CF Oak Island PERSONEL;
     }
-    #Run a:hover{
+    #Run div a:hover{
         color: rgb(253, 129, 13);
         transition: 0.5s;
     }
@@ -100,7 +103,7 @@ ul li a:hover{
         text-align: center;
         font-family: CF Oak Island PERSONEL;
     }
-    #Rith a:hover{
+    #Rith div a:hover{
         color: rgb(248, 0, 174);
         transition: 0.5s;
     }
@@ -108,18 +111,19 @@ ul li a:hover{
         text-align: center;
         font-family: CF Oak Island PERSONEL;   
     }
-    #Dyno a:hover{
+    #Dyno div a:hover{
         color: rgb(255, 0, 0);
         transition: 0.5s;
     }
     .p2{
         text-decoration: bold;
         font-size: 25px;
+        margin-bottom: 5px;
         font-family: cursive;
         color: steelblue;
     }
     .p2:hover{
-        text-decoration: underline;
+        text-decoration: underline;   
     }
     h2{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -130,18 +134,77 @@ ul li a:hover{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     .footer{
-        text-align: center;
+        margin-top: 30px;
         height: 20vh;
-        position:static;
-        width: 99%;
-        background-image: linear-gradient(white,yellow);
+        width:100%;
+      display: flex;
+      transition:1s ;
+      align-items: center ;
+      justify-content: center;
+        background-image: linear-gradient(rgb(252, 219, 176),rgb(247, 247, 112));
     }  
     #textfooter{
-        margin-top:35px ;
+      vertical-align: baseline;
+      text-align: center;
         font-size: 20px;
         text-shadow:1px 1px 2px black, 0 0 25px rgb(154, 228, 34), 0 0 5px rgb(121, 54, 228);
     }
     .footer:hover{
         color: white;
-        transition:0.3s ease-in-out;
+        background-image: linear-gradient(rgb(175, 151, 119),rgb(150, 150, 67));
+        transition:1s ;
     }
+
+
+    .flip-card-back  div{
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+        background-color: rgb(253, 214, 162);
+    }
+    .flip-card-back {
+          border-radius: 15px;
+        color: white;
+      }
+      .History div div div div {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #Chhengly div,#Run div,#Dyno div,#Rith div {
+        visibility: hidden;
+          background-color:  rgb(247, 129, 109);
+          opacity: 0;
+          padding:3px;
+          transition: visibility 0s, opacity 0.5s linear;
+        }
+        #Chhengly:hover div,#Run:hover div,#Dyno:hover div,#Rith:hover div{
+          opacity: 1;
+          visibility: visible;
+
+      }
+      #Chhengly, #Run, #Dyno, #Rith{
+          background-repeat: no-repeat;  
+          background-size: 350px 350px;
+          margin: 25px;
+          padding: 12px;
+
+      }
+      #Chhengly{
+          background-image: url('Chhengly.jpg');
+        }
+        #Run{
+          background-image: url('Ream Run.jpg');
+          
+          
+      }
+      #Dyno{
+          background-image: url('Dyno.jpg');
+          
+        }
+        #Rith{
+          background-image: url('Mrr Rith.jpg');
+          
+      }
+      
